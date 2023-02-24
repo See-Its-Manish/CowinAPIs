@@ -20,6 +20,43 @@ class SearchRepository {
         }
     }
 
+    async getAllStates() {
+        try {
+            const response = await axios.get('https://cdn-api.co-vin.in/api/v2/admin/location/states');
+            return response;
+        } catch (error) {
+            console.log("Something went wrong in search repository");
+            throw error;
+        }
+    }
+
+    async getAllDistrictsByStateId({stateId}) {
+        try {
+            console.log(stateId);
+            const response = await axios.get(`https://cdn-api.co-vin.in/api/v2/admin/location/districts/${stateId}`);
+            return response;
+        } catch (error) {
+            console.log("Something went wrong in search repository");
+            throw error;
+        }
+    }
+
+    async getAllCentersByDistrictIdAndDate({districtId, date}) {
+        try {
+            const response = await axios.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict',
+            {
+                params : {
+                    "district_id" : districtId,
+                    "date" : date 
+                }
+            });
+            return response;
+        } catch (error) {
+            console.log("Something went wrong in search repository");
+            throw error;
+        }
+    }
+
 }
 
 module.exports = SearchRepository
