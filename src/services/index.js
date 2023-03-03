@@ -1,4 +1,5 @@
 module.exports = {
     SearchService : require('./search-service'),
-    AuthenticationService : require('./authentication-service')
+    AuthenticationService : require('./authentication-service'),
+    UserService : require('./user-service')
 };
