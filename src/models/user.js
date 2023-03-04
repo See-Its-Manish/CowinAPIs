@@ -16,6 +16,11 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsToMany(models.Role,{
         through : 'User_Roles',
       });
+
+      this.hasMany(models.Preference,{
+        as : 'preferences',
+        foreignKey : 'userId',
+      });
     }
   }
   User.init({
@@ -32,6 +37,11 @@ module.exports = (sequelize, DataTypes) => {
     password: {
       type : DataTypes.STRING,
       allowNull : false
+    },
+    reminders : {
+      type : DataTypes.INTEGER,
+      defaultValue : 0,
+      allowNull : false,
     }
   }, {
     sequelize,
