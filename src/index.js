@@ -3,7 +3,7 @@ const {PORT} = require('./config/serverConfig');
 const app = express();
 const bodyParser = require('body-parser');
 const apiRoutes = require('./routes/index');
-const {User,Role} = require('./models/index');
+const {User,Role,Preference} = require('./models/index');
 // const setUpJobs = require('./utils/job');
 const db = require('./models/index');
 const prepareAndStartServer = () => {
@@ -23,6 +23,7 @@ const prepareAndStartServer = () => {
         // const r1 = await Role.findByPk(1);
 
         // u1.addRole(r1);
+           
     });
     
 }

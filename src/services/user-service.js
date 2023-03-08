@@ -28,7 +28,7 @@ class UserService {
             if(!user) {
                 throw {error : "No user with corresponding token exists"};
             }
-            return user;
+            return user.id;
         } catch (error) {
             console.log("Something went wrong user service!");
             throw error;

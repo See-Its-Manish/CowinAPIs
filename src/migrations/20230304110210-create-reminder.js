@@ -2,14 +2,14 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Preferences', {
+    await queryInterface.createTable('Reminders', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      pinode: {
+      pincode: {
         type: Sequelize.INTEGER,
         allowNull : false
       },
@@ -51,6 +51,11 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull : false,
       },
+      email : {
+        type : Sequelize.STRING,
+        allowNull : false,
+        isEmail  : true
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -62,6 +67,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Preferences');
+    await queryInterface.dropTable('Reminders');
   }
 };

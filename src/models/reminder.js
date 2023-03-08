@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Preference extends Model {
+  class Reminder extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,14 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.hasMany(models.Center,{
-          as : 'centers',
-          foreignKey : 'preferenceId'
-      });
     }
   }
-  Preference.init({
-    pinode: {
+  Reminder.init({
+    pincode: {
       type: DataTypes.INTEGER,
       allowNull : false
     },
@@ -52,6 +48,11 @@ module.exports = (sequelize, DataTypes) => {
       values : ['ALL', 'DOSE 1', 'DOSE 2', 'BOOSTER DOSE'],
       defaultValue : 'ALL'
     },
+    email : {
+      type : DataTypes.STRING,
+      allowNull : false,
+      isEmail  : true
+    },
     startingDate:{
       type : DataTypes.DATE,
       allowNull : false
@@ -62,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'Preference',
+    modelName: 'Reminder',
   });
-  return Preference;
+  return Reminder;
 };

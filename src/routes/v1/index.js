@@ -1,7 +1,7 @@
 const express = require('express');
 
 const router = express.Router();
-const {SearchController, AuthenticationController, UserController} = require('../../controllers/index');
+const {SearchController, AuthenticationController, UserController, ReminderController} = require('../../controllers/index');
 
 // For Search Controller
 router.get('/searchdistricts/:stateId', SearchController.getAllDistrictsByStateId);
@@ -23,5 +23,11 @@ router.post('/signin', UserController.signIn);
 router.get('/isauthenticated', UserController.isAuthenticated);
 router.get('/isadmin', UserController.isAdmin);
 
+
+// For Reminder Controller
+router.post('/createreminder',ReminderController.create);
+router.delete('/deletereminder/:reminderId',ReminderController.destroy);
+router.get('/getreminderbyid/:reminderId',ReminderController.getReminderById);
+router.get('/getremindersbyemail',ReminderController.getAllRemindersByEmail);
 
 module.exports = router;
