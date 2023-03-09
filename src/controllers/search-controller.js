@@ -6,7 +6,7 @@ const getAllCetersByPincode = async (req,res) => {
     try {
         const response = await SearchService.getCentersByPinCode(req.params);
         return res.status(StatusCodes.OK).json({
-            data : response.data,
+            data : response,
             success : true,
             err : {},
             message : "Successfully fetched the centers"
@@ -27,7 +27,7 @@ const getAllStates = async (req,res) => {
     try {
         const response = await SearchService.getAllStates();
         return res.status(StatusCodes.OK).json({
-            data : response.data.states,
+            data : response,
             success : true,
             err : {},
             message : "Successfully fetched all the states"
@@ -48,7 +48,7 @@ const getAllDistrictsByStateId = async (req,res) => {
     try {
         const response = await SearchService.getAllDistrictsByStateId(req.params);
         return res.status(StatusCodes.OK).json({
-            data : response.data.districts,
+            data : response,
             success : true,
             err : {},
             message : "Successfully fetched all the districts"
@@ -68,7 +68,7 @@ const getAllCentersByDistrictIdAndDate = async (req,res) => {
     try {
         const response = await SearchService.getAllCentersByDistrictIdAndDate(req.params);
         res.status(StatusCodes.OK).json({
-            data : response.data,
+            data : response,
             success : true,
             err : {},
             message : "Successfully fetched all the centers in the district"

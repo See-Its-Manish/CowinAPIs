@@ -20,7 +20,11 @@ module.exports = (sequelize, DataTypes) => {
     reminderId : {
       type : DataTypes.INTEGER,
       allowNull : false,
-    }
+    },
+    date : {
+      type: DataTypes.DATEONLY,
+      allowNull : false,
+    },
   }, {
     sequelize,
     modelName: 'Center',

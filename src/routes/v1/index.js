@@ -16,14 +16,6 @@ router.post('/authentication/confirmOTP', AuthenticationController.confirmOTP);
 router.get('/authentication/fetchcertificate/:beneficiary_reference_id', AuthenticationController.fetchVaccinationCertfication);
 
 
-
-// For User Controller
-router.post('/signup',UserController.create);
-router.post('/signin', UserController.signIn);
-router.get('/isauthenticated', UserController.isAuthenticated);
-router.get('/isadmin', UserController.isAdmin);
-
-
 // For Reminder Controller
 router.post('/createreminder',ReminderController.create);
 router.delete('/deletereminder/:reminderId',ReminderController.destroy);

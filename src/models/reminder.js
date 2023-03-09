@@ -54,11 +54,11 @@ module.exports = (sequelize, DataTypes) => {
       isEmail  : true
     },
     startingDate:{
-      type : DataTypes.DATE,
+      type : DataTypes.DATEONLY,
       allowNull : false
     },
     endingDate: {
-      type : DataTypes.DATE,
+      type : DataTypes.DATEONLY,
       allowNull : false
     }
   }, {

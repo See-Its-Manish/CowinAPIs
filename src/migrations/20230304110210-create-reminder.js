@@ -44,11 +44,11 @@ module.exports = {
         defaultValue : 'ALL'
       },
       startingDate: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull : false,
       },
       endingDate: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull : false,
       },
       email : {

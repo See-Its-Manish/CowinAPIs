@@ -13,7 +13,7 @@ class SearchRepository {
                 }
             );
             // console.log(response);
-            return response;
+            return response.data;
         } catch (error) {
             console.log("Something went wrong in search repo");
             throw error;
@@ -23,7 +23,7 @@ class SearchRepository {
     async getAllStates() {
         try {
             const response = await axios.get('https://cdn-api.co-vin.in/api/v2/admin/location/states');
-            return response;
+            return response.data.states;
         } catch (error) {
             console.log("Something went wrong in search repository");
             throw error;
@@ -34,7 +34,7 @@ class SearchRepository {
         try {
             console.log(stateId);
             const response = await axios.get(`https://cdn-api.co-vin.in/api/v2/admin/location/districts/${stateId}`);
-            return response;
+            return response.data.districts;
         } catch (error) {
             console.log("Something went wrong in search repository");
             throw error;
@@ -50,7 +50,7 @@ class SearchRepository {
                     "date" : date 
                 }
             });
-            return response;
+            return response.data;
         } catch (error) {
             console.log("Something went wrong in search repository");
             throw error;

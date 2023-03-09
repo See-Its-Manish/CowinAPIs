@@ -59,6 +59,29 @@ class ReminderRepository {
     }
 
 
+    async getAllReminders() {
+        try {
+            const result = await Reminder.findAll();
+            return result;
+        } catch (error) {
+            console.log("Something went wrong in reminder repo!");
+            throw error;
+        }
+    }
+
+    async isCenterPresent(filters) {
+        try {
+           const result = await Center.findOne({
+            where : filters
+           });
+           return ((result) ? true : false);
+        } catch (error) {
+            console.log("Something went wrong in reminder repo");
+            throw error;
+        }
+    }
+
+
 
 }
 
