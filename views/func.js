@@ -162,6 +162,21 @@ $("#inputDistrict").html(htmlString);
 });
 
 
+let state = document.getElementById('inputState');
+let district = document.getElementById('inputDistrict');
+district.disabled = true;
+state.addEventListener("change", stateHandle);
+
+function stateHandle() {
+    if(document.getElementById('inputState').value === "") {
+        district.disabled = true;
+    }
+    else {
+        district.disabled = false;
+    }
+}
+
+
 function toggle_visibility1(id1,id2) {
     var main = document.getElementById(id1);
     var temp = document.getElementById(id2);

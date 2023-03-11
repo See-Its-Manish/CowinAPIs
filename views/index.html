@@ -15,20 +15,20 @@
     <!-- ---------------------------------------NAVBAR START------------------------------------------ -->
     <div class="nav">
         <div class="logo-box">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHGq1BkRbLcvOb_pHTDvPAuvRbxey_6IV6UQ&usqp=CAU" alt="logo-img">
-            <h3 class="title">Covid Care</h3>
+            <img src="logo.png" alt="logo-img">
+            <h3 class="title">Cowin API</h3>
         </div>
         <div class="nav-right">
             <div class="dropdown">
                 <button class="nav-button">For Patients</button>  
                 <i class="fa-solid fa-chevron-down drop"></i>
                 <div class="dropdown-content">
-                    <a href="https://blog.hubspot.com/">FAQs</a>
-                    <a href="https://academy.hubspot.com/">Cowin</a>
-                    <a href="https://www.youtube.com/user/hubspot">Patients Help</a>
-                    <a href="https://blog.hubspot.com/">Our Doctor</a>
-                    <a href="https://academy.hubspot.com/">Our Reviews</a>
-                    <a href="https://www.youtube.com/user/hubspot">Tracker</a>
+                    <a href="">FAQs</a>
+                    <a href="">Cowin</a>
+                    <a href="">Patients Help</a>
+                    <a href="">Our Doctor</a>
+                    <a href="">Our Reviews</a>
+                    <a href="">Tracker</a>
                 </div>
             </div>
             <div class="app"><h5 class="book">Book Free Appointment</h5></div>
@@ -43,7 +43,7 @@
     <div class="input-box">
         <div class="choice-btn">
             <div class="radio-btn">
-                <input type="radio" label="Search by Pincode" class="switch-btn" id="toggle-on" name="toggle" value="1" onclick="toggle_visibility2('pincode','state');" checked>
+                <input type="radio" label="Search" class="switch-btn" id="toggle-on" name="toggle" value="1" onclick="toggle_visibility2('pincode','state');" checked>
                 <input type="radio" label="Search by State" class="switch-btn" id="toggle-off" name=toggle value="2" onclick="toggle_visibility1('pincode','state');">
             </div>
         </div>
@@ -54,6 +54,54 @@
                         <div class="pin-input">
                             <label for="Pincode">Pincode</label> <br>
                             <input type="tel" name="Pincode" placeholder="Enter Pincode" maxlength="6" id="intTextBox">
+                        </div>
+                        <div class="state-input">
+                            <label for="inputState">State</label>
+                            <select class="form-control" id="inputState">
+                                <option value="SelectState" disabled selected>State</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Andra Pradesh">Andra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Lakshadeep">Lakshadeep</option>
+                                <option value="Madya Pradesh">Madya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Orissa">Orissa</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Pondicherry">Pondicherry</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttaranchal">Uttaranchal</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="West Bengal">West Bengal</option>
+                            </select>
+                        </div>
+                        <div class="district-input">
+                            <label for="inputDistrict">District</label>
+                            <select class="form-control" id="inputDistrict">
+                                <option value="District">District</option>
+                            </select>
                         </div>
                         <div class="fee-input">
                             <label for="Fee">Fee Type</label>
@@ -92,7 +140,7 @@
                         <div class="notify-input">
                             <input type="checkbox" name="check" id="c1-13" type="checkbox">
                             <label for="c1-13">
-                                Notify me on Whatsapp when appointment is confirm.
+                                Notify me on Gmail when appointment is confirm.
                             </label>
                         </div>     
                         <div class="search-input">
@@ -105,54 +153,6 @@
         <!-- ---------------------------------------FORM 1 ENDS---------------------------------- -->
         <div class="state" id='state' style="display: none;">
             <form name="form2" id="form2" action="" method="post">
-                <div class="state-input">
-                    <label for="inputState">State</label>
-                    <select class="form-control" id="inputState">
-                        <option value="SelectState" disabled selected>State</option>
-                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                        <option value="Andra Pradesh">Andra Pradesh</option>
-                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                        <option value="Assam">Assam</option>
-                        <option value="Bihar">Bihar</option>
-                        <option value="Chandigarh">Chandigarh</option>
-                        <option value="Chhattisgarh">Chhattisgarh</option>
-                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
-                        <option value="Daman and Diu">Daman and Diu</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Goa">Goa</option>
-                        <option value="Gujarat">Gujarat</option>
-                        <option value="Haryana">Haryana</option>
-                        <option value="Himachal Pradesh">Himachal Pradesh</option>
-                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                        <option value="Jharkhand">Jharkhand</option>
-                        <option value="Karnataka">Karnataka</option>
-                        <option value="Kerala">Kerala</option>
-                        <option value="Lakshadeep">Lakshadeep</option>
-                        <option value="Madya Pradesh">Madya Pradesh</option>
-                        <option value="Maharashtra">Maharashtra</option>
-                        <option value="Manipur">Manipur</option>
-                        <option value="Meghalaya">Meghalaya</option>
-                        <option value="Mizoram">Mizoram</option>
-                        <option value="Nagaland">Nagaland</option>
-                        <option value="Orissa">Orissa</option>
-                        <option value="Punjab">Punjab</option>
-                        <option value="Pondicherry">Pondicherry</option>
-                        <option value="Rajasthan">Rajasthan</option>
-                        <option value="Sikkim">Sikkim</option>
-                        <option value="Tamil Nadu">Tamil Nadu</option>
-                        <option value="Telangana">Telangana</option>
-                        <option value="Tripura">Tripura</option>
-                        <option value="Uttaranchal">Uttaranchal</option>
-                        <option value="Uttar Pradesh">Uttar Pradesh</option>
-                        <option value="West Bengal">West Bengal</option>
-                    </select>
-                </div>
-                <div class="district-input">
-                    <label for="inputDistrict">District</label>
-                    <select class="form-control" id="inputDistrict">
-                        <option value="District">District</option>
-                    </select>
-                </div>
                 <div class="fee-input">
                     <label for="Fee">Fee Type</label>
                     <select name="Fee">
