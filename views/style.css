@@ -1,0 +1,433 @@
+body {
+    margin: 0px;
+    background-color: #E3FDFD;
+}
+/* Dropdown CSS */
+.dropdown {
+    display: inline-block;
+    position: absolute;
+    right: 45%;
+    height: 60px;
+}
+.nav-button { 
+    border: none;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    text-size-adjust: 20px;
+    background-color: rgba(64, 121, 183, 0);
+    margin-top: 20px;
+    color: #FBFFB1;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    
+}
+.nav-button:hover {
+    cursor: pointer;
+    color: #F94A29;
+}
+.dropdown-content {
+    display: none;
+    position: sticky;
+    width: 200%;
+    height: 600%;
+    overflow: visible;
+    background-color: beige;
+    border-radius: 10%;
+
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: #F94A29;
+    position: sticky;
+
+}
+.dropdown-content a {
+    display: block;
+    color: #000000;
+    padding:10px 15px;
+    text-decoration: none;
+}
+.dropdown-content a:hover {
+    color: #F94A29;
+    display: fixed;
+}
+/* ------------------------------------------------- */
+.nav {
+    height: 10%;
+    background-color: #ab47bc;
+    display: flex;
+    color: #FBFFB1;
+    justify-content: space-between;
+}
+.nav-right {
+    display: flex;
+}
+.logo-box {
+    display: flex;
+    cursor: pointer;
+}
+.title {
+    margin-top: 17px;
+    margin-left: 5px;
+    font-family: 'Tilt Neon', cursive;
+}
+.nav-h5 {
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
+    display: inline;
+}
+.book {
+    font-family: 'Roboto Mono', monospace;
+    position: relative;
+    bottom: 30%;
+    left: 9%;
+}
+.app {
+    position: relative;
+    left: -140%;
+    height: 60%;
+    width: 200px;
+    top: 10%;
+    border: solid 2px white;
+    border-radius: 8%;
+    cursor: pointer;
+}
+.app:hover {
+    background-color: white;
+    color: #F94A29;
+    border-color: #F94A29;
+}
+.city {
+    position: absolute;
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+}
+.city:hover {
+    color: #F94A29;
+}
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+/* -------------------------------------NAV CSS ENDS----------------------------- */
+
+.input-box {
+    width: 60%;
+    height: 500px;
+    position: relative;
+    margin-top: 40px;
+    padding-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),0 5px 15px 0 rgba(0,0,0,0.08);
+    background-color: #ffffff;
+    border-radius: 18px;
+    transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+}
+
+.choice-btn {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 100%;
+	height: 40px;
+    margin-bottom: 5px;
+}
+
+.radio-btn {
+    width: 75%;
+    height: 100%;
+	background: #454857;
+	padding: 4px;
+	border-radius: 3px;
+	box-shadow: inset 0 0 0 3px rgba(35, 33, 45, 0.3),
+		0 0 0 3px rgba(185, 185, 185, 0.3);
+	position: relative;
+}
+
+.radio-btn .switch-btn {
+	width: 47%;
+	height: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 2px;
+	padding: 4px 6px;
+	background: #454857;
+	color: #bdbdbdbd;
+	font-size: 20px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	transition: all 100ms linear;
+}
+
+.radio-btn .switch-btn:checked {
+	background-image: linear-gradient(180deg, #CD5888, #74bbad);
+	color: #FBFFB1;
+	box-shadow: 0 1px 1px #0000002e;
+	text-shadow: 0 1px 0px #79485f7a;
+}
+
+.radio-btn .switch-btn:before {
+	content: attr(label);
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+/* ---------------------------BUTTON ENDS--------------------------- */
+.pincode {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.pin-form {
+    height: 350px;
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),0 5px 15px 0 rgba(0,0,0,0.08);
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    border-left: 0 solid #AEE2FF;
+    transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+}
+.pin-form:hover {
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid #AEE2FF;
+}
+.pin-input {
+    margin: 25px 10px;
+    height: 30px;
+
+}
+.pin-input input {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: solid 1px #8b8a8b;
+    border-radius: 4px;
+    margin-top: 3px;
+    font-size: large;
+}
+
+.pin-input input::placeholder{
+    font-size: large;
+}
+.fee-input , .vacine-input {
+    display: inline-block;
+    padding: 25px 10px;
+    width: 45%;
+    padding-bottom: 10px;
+}
+.fee-input select , .vacine-input select{
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    border: solid 1px #8b8a8b;
+    border-radius: 4px;
+    margin-top: 3px;
+    font-size: 15px;
+}
+.age-input , .dose-input {
+    display: inline-block;
+    width: 45%;
+    padding: 25px 10px;
+    padding-top: 10px;
+}
+.age-input select , .dose-input select {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    border: solid 1px #8b8a8b;
+    border-radius: 4px;
+    margin-top: 3px;
+    font-size: 15px;
+}
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+    .notify-input input[type=checkbox] {
+      --active: #275EFE;
+      --active-inner: #fff;
+      --focus: 2px rgba(39, 94, 254, .3);
+      --border: #BBC1E1;
+      --border-hover: #275EFE;
+      --background: #fff;
+      --disabled: #F6F8FF;
+      --disabled-inner: #E1E6F9;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      height: 21px;
+      outline: none;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      margin-left: 10px;
+      cursor: pointer;
+      border: 1px solid var(--bc, var(--border));
+      background: var(--b, var(--background));
+      transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    }
+    .notify-input input[type=checkbox]:after {
+      content: "";
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+    }
+    .notify-input input[type=checkbox]:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --d-o: .3s;
+      --d-t: .6s;
+      --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+    }
+    .notify-input input[type=checkbox]:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: 0.9;
+    }
+    .notify-input input[type=checkbox]:disabled:checked {
+      --b: var(--disabled-inner);
+      --bc: var(--border);
+    }
+    .notify-input input[type=checkbox]:disabled + label {
+      cursor: not-allowed;
+    }
+    .notify-input input[type=checkbox]:hover:not(:checked):not(:disabled) {
+      --bc: var(--border-hover);
+    }
+    .notify-input input[type=checkbox]:focus {
+      box-shadow: 0 0 0 var(--focus);
+    }
+    .notify-input input[type=checkbox]:not(.switch) {
+      width: 21px;
+    }
+    .notify-input input[type=checkbox]:not(.switch):after {
+      opacity: var(--o, 0);
+    }
+    .notify-input input[type=checkbox]:not(.switch):checked {
+      --o: 1;
+    }
+    .notify-input input[type=checkbox] + label {
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+
+    .notify-input input[type=checkbox]:not(.switch) {
+      border-radius: 7px;
+    }
+    .notify-input input[type=checkbox]:not(.switch):after {
+      width: 5px;
+      height: 9px;
+      border: 2px solid var(--active-inner);
+      border-top: 0;
+      border-left: 0;
+      left: 7px;
+      top: 4px;
+      transform: rotate(var(--r, 20deg));
+    }
+    .notify-input input[type=checkbox]:not(.switch):checked {
+      --r: 43deg;
+    }
+}
+
+  .notify-input * {
+    box-sizing: inherit;
+    font-size: 14px;
+}
+  .notify-input *:before,
+  .notify-input *:after {
+    box-sizing: inherit;
+}
+.search-input {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
+.search-btn {
+    width: 100%;
+    align-items: center;
+    background-color: #0A66C2;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+}
+  
+  .search-btn:hover,
+  .search-btn:focus { 
+    background-color: #16437E;
+    color: #ffffff;
+}
+  
+  .search-btn:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+}
+  
+  .search-btn:disabled { 
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+
+.state {
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+
+.state-input , .district-input{
+    display: inline-block;
+    margin: 25px 10px;
+    height: 30px;
+    width: 45%;
+    padding-bottom: 10px;
+}
+.state-input select , .district-input select {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: solid 1px #8b8a8b;
+    border-radius: 4px;
+    margin-top: 3px;
+    font-size: large;
+}
+
+.state-input option{
+    font-size: small;
+}
